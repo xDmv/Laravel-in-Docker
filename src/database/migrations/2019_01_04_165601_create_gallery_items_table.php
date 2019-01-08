@@ -19,7 +19,7 @@ class CreateGalleryItemsTable extends Migration
 			$table->string('lang', 2);
 			$table->string('img_key');
 			$table->string('text');
-			$table->integer('active');
+			$table->integer('active')->default(0);
 			$table->timestamps();
         });
     }

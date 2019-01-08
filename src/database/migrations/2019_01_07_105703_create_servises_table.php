@@ -23,7 +23,7 @@ class CreateServisesTable extends Migration
 			$table->text('text_about');
 			$table->json('prise_json');
 			$table->integer('prices_count');
-			$table->integer('active');
+			$table->integer('active')->default(0);
 			$table->timestamps();
         });
     }

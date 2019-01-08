@@ -20,7 +20,7 @@ class CreateExclusiveTable extends Migration
 			$table->string('img_display');
 			$table->string('img_slider');
 			$table->text('text_html');
-			$table->integer('active');
+			$table->integer('active')->default(0);
 			$table->timestamps();
         });
     }

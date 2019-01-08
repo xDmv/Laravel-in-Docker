@@ -20,7 +20,7 @@ class CreateGalleryTable extends Migration
 			$table->string('img_display');
 			$table->string('img_slider');
 			$table->integer('youtube');
-			$table->integer('active');
+			$table->integer('active')->default(0);
 			$table->timestamps();
         });
     }
