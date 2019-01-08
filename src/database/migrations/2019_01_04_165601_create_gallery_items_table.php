@@ -17,8 +17,8 @@ class CreateGalleryItemsTable extends Migration
 			$table->increments('id');
 			$table->integer('id_gallery');
 			$table->string('lang', 2);
-			$table->string('img_key');
-			$table->string('text');
+			$table->string('img_key')->nullable();
+			$table->string('text')->nullable();
 			$table->integer('active')->default(0);
 			$table->timestamps();
         });

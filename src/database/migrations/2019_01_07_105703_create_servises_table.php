@@ -18,8 +18,8 @@ class CreateServisesTable extends Migration
 			$table->longText('title');
 			$table->longText('title_md5')->unique();
 			$table->string('lang', 2);
-			$table->string('img_display');
-			$table->string('img_slider');
+			$table->string('img_display')->nullable();
+			$table->string('img_slider')->nullable();
 			$table->text('text_about');
 			$table->json('prise_json');
 			$table->integer('prices_count');

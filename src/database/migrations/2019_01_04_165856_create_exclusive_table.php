@@ -17,8 +17,8 @@ class CreateExclusiveTable extends Migration
 			$table->increments('id');
 			$table->longText('title');
 			$table->string('lang', 2);
-			$table->string('img_display');
-			$table->string('img_slider');
+			$table->string('img_display')->nullable();
+			$table->string('img_slider')->nullable();
 			$table->text('text_html');
 			$table->integer('active')->default(0);
 			$table->timestamps();

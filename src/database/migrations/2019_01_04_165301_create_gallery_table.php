@@ -17,9 +17,9 @@ class CreateGalleryTable extends Migration
 			$table->increments('id');
 			$table->string('title');
 			$table->string('lang', 2);
-			$table->string('img_display');
-			$table->string('img_slider');
-			$table->integer('youtube');
+			$table->string('img_display')->nullable();
+			$table->string('img_slider')->nullable();
+			$table->integer('youtube')->default(0);
 			$table->integer('active')->default(0);
 			$table->timestamps();
         });
