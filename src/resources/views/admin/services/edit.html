@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Editors</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+	<div class="wrapper">
+		<header class="main-header">
+			<a href="../../index.html" class="logo">
+				<span class="logo-lg"><b>Admin</b>LTE</span>
+			</a>
+			<nav class="navbar navbar-static-top">
+				<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+								<span class="hidden-xs">Alexander Pierce</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="user-header">
+									<img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+									<p>
+										Alexander Pierce - Web Developer
+										<small>Member since Nov. 2012</small>
+									</p>
+								</li>
+								<li class="user-footer">
+									<div class="pull-left">
+										<a href="#" class="btn btn-default btn-flat">Profile</a>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="btn btn-default btn-flat">Sign out</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">MAIN NAVIGATION</li>
+					<li>
+						<a href="../services/index.html">
+							<i class="fa fa-cog"></i> <span>Services</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="index.html">
+							<i class="fa fa-users"></i> <span>Commands</span>
+						</a>
+					</li>
+					<li>
+						<a href="../exclusive/index.html">
+							<i class="fa fa-star"></i> <span>Exclusive</span>
+						</a>
+					</li>
+					<li>
+						<a href="../gallery/index.html">
+							<i class="fa fa-picture-o"></i> <span>Gallery</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</aside>
+
+		<div class="content-wrapper">
+			<section class="content-header">
+				<h1>
+					Редактирование
+					<small>редактирование команды</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+					<li class="active">Edit Services</li>
+				</ol>
+			</section>
+
+			<section class="content">
+				<div class="row">
+					<form role="form">
+						<div class="col-md-12">
+							<div class="box box-info">
+								<!-- <div class="box-header"> -->
+									<h3 class="box-title">Сервис
+										<small>можно отредактировать</small>
+									</h3>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Наименование сервиса</label>
+										<input type="text" class="form-control" id="name" placeholder="Name services">
+									</div>
+								<!-- </div> -->
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- <div class="box-header"> -->
+								<div class="form-group">
+									<img src="../../../../img/no-image.png" alt=""></br>
+									<label for="exampleInputFile">Картинка для слайдера</label>
+									<input type="file" id="imageSlider">
+									<p class="help-block">Картинка для слайдера</p>
+								</div>
+							<!-- </div> -->
+						</div>
+						<div class="col-md-6">
+							<!-- <div class="box-header"> -->
+								<div class="form-group">
+									<img src="../../../../img/no-image.png" alt=""></br>
+									<label for="exampleInputFile">Картинка для экрана</label>
+									<input type="file" id="imageDisplay">
+									<p class="help-block">Картинка для экрана</p>
+								</div>
+							<!-- </div> -->
+						</div>
+						<div class="col-md-12">
+							<!-- <div class="box-header"> -->
+								<h3 class="box-title">Описание сервиса
+									<small>краткое описание сервиса или услуги</small>
+								</h3>
+								<div class="box-body pad">
+									<textarea id="editor1" name="editor1" rows="10" cols="80">
+Описание сервиса
+							</textarea>
+								</div>
+							<!-- </div> -->
+						</div>
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">Save</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">
+				<b>Version</b> 2.4.0
+			</div>
+			<strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
+		</footer>
+		<div class="control-sidebar-bg"></div>
+	</div>
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- CK Editor -->
+<script src="../../bower_components/ckeditor/ckeditor.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+</script>
+</body>
+</html>
