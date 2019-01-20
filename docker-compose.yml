@@ -94,7 +94,7 @@ services:
       ROOT_DIR: '/app/public' # App path must equals with php-fpm container path
     volumes:
     - ./src:/app:ro
-    ports: ['9999:80']
+    ports: ['7780:80']
     depends_on:
     - *php-fpm-service
     networks:
@@ -106,7 +106,7 @@ services:
     command: redis-server
     volumes:
     - redis-data:/data:rw
-    ports: [*redis-port, '16379:6379'] # Port 16379 for connecting from localhost
+    ports: [*redis-port, '36379:6379'] # Port 16379 for connecting from localhost
     networks:
     - backend-network
 
@@ -119,6 +119,6 @@ services:
       POSTGRES_PASSWORD: *pg-password
     volumes:
     - pg-data:/var/lib/postgresql/data:rw
-    ports: [*pg-port, '15432:5432'] # Port 15432 for connecting from localhost using, for example, data-grip
+    ports: [*pg-port, '35432:5432'] # Port 15432 for connecting from localhost using, for example, data-grip
     networks:
     - backend-network
