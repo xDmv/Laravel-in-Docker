@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
-  <style>
+<style>
     html, body {
       background-color: #fff;
       background-image: radial-gradient(circle, #fff, #fff, #ddd);
@@ -73,31 +73,31 @@
       text-decoration: none;
       text-transform: uppercase;
     }
-  </style>
-  <!-- Styles -->
+</style>
+
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-  <div class="top-right links">
-    @if (\Illuminate\Support\Facades\Route::has('login'))
-      <a href="{{ route('login') }}">Log in</a>
-    @endif
-  </div>
-  <div class="content">
-    <div class="title">
-      <img src="{{ asset('img/laravel-in-docker.png') }}" alt="Laravel in docker" width="400">
-      <p class="users">
-        Users:
-        <ul class="users-list">
-          @foreach($users as $user)
-            @if($user instanceof \App\Models\User)
-              <li>{{ $user->login }}</li>
-            @endif
-          @endforeach
-        </ul>
-      </p>
-    </div>
-  </div>
-</div>
+	<div class="flex-center position-ref full-height">
+		<div class="top-right links">
+		@if (\Illuminate\Support\Facades\Route::has('login'))
+			<a href="{{ route('login') }}">Log in</a>
+		@endif
+		</div>
+		<div class="content">
+			<div class="title">
+				<img src="{{ asset('img/laravel-in-docker.png') }}" alt="Laravel in docker" width="400">
+				<p class="users">
+				Users:
+					<ul class="users-list">
+						@foreach($users as $user)
+						@if($user instanceof \App\Models\User)
+							<li>{{ $user->login }}</li>
+						@endif
+						@endforeach
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>Admin</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="../css/admin.css">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,12 +35,12 @@
 					<ul class="nav navbar-nav">
 						<li class="dropdown user user-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
+								<img src="img/no-image.png" class="user-image" alt="User Image">
 								<span class="hidden-xs">Alexander Pierce</span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="user-header">
-									<img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+									<img src="../img/no-image.png" class="img-circle" alt="User Image">
 									<p>
 										Alexander Pierce - Web Developer
 										<small>Member since Nov. 2012</small>
@@ -102,13 +102,13 @@
 	<!--
 	<script src="js/admin.js"></script>
 	-->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/fastclick.js"></script>
-	<script src="js/adminlte.min.js"></script>
-	<script src="js/demo.js"></script>
-	<script src="js/ckeditor.js"></script>
-	<script src="js/bootstrap3-wysihtml5.all.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/fastclick.js"></script>
+	<script src="../js/adminlte.min.js"></script>
+	<script src="../js/demo.js"></script>
+	<script src="../js/ckeditor.js"></script>
+	<script src="../js/bootstrap3-wysihtml5.all.min.js"></script>
 
 </body>
 </html>

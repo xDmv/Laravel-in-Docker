@@ -12,7 +12,6 @@ class DashboardController
 
 	public function index()
 	{
-		//dd('2');
 		return view('admin.dashboard');
 	}
 }

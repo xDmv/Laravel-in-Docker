@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'IndexController@index');
 
 Route::get('/admins', 'Admin\DashboardController@index');
+
+Route::resource('/admins/command','Admin\CommandController');
