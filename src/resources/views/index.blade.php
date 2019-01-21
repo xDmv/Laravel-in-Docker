@@ -12,9 +12,9 @@
 
   <style>
     html, body {
-      background-color: #fff;
-      background-image: radial-gradient(circle, #fff, #fff, #ddd);
-      color: #636b6f;
+      background-color: #272b30 !important;
+      background-image: radial-gradient(circle, #000, #000, #111);
+      color: #c2c2c2;
       font-family: 'Nunito', sans-serif;
       font-weight: 200;
       height: 100vh;
@@ -65,7 +65,7 @@
     }
 
     .links > a {
-      color: #252e37;
+      color: #c2c2c2;
       padding: 0 25px;
       font-size: 12px;
       font-weight: 600;
@@ -91,7 +91,7 @@
         <ul class="users-list">
           @foreach($users as $user)
             @if($user instanceof \App\Models\User)
-              <li>{{ $user->login }}</li>
+              <li>{{ $user->name }}</li>
             @endif
           @endforeach
         </ul>
