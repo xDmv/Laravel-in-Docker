@@ -42,6 +42,7 @@ class User extends AbstractBaseModel implements AuthenticatableContract, Authori
     protected $fillable = [
         'login',
         'display_name',
+		'email',
         'password',
     ];
 

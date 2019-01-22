@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/admins', 'Admin\DashboardController@index');
+//Route::get('/admins', 'Admin\DashboardController@index');
 
-Route::resource('/admins/command','Admin\CommandController');
+//Route::resource('/admins/command','Admin\CommandController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/team', 'TeamController@index')->name('team');

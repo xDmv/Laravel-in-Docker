@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin</title>
+  <title>{{ config('app.name', 'Laravel') }}</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
   <link rel="stylesheet" href="css/admin.css">
+  <script src="{{ asset('js/app.js') }}" defer></script>
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,6 +18,7 @@
 
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
 
 </head>
 
@@ -35,24 +37,33 @@
 					<ul class="nav navbar-nav">
 						<li class="dropdown user user-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
-								<span class="hidden-xs">Alexander Pierce</span>
+								<img src="img/no-image.png" class="user-image" alt="User Image">
+								<span class="hidden-xs">{{ Auth::user()->display_name }}</span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="user-header">
-									<img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+									<img src="img/no-image.png" class="img-circle" alt="User Image">
 									<p>
-										Alexander Pierce - Web Developer
-										<small>Member since Nov. 2012</small>
+										{{ Auth::user()->display_name }}
+										<small>{{ Auth::user()->login }}</small>
+										<small>{{ Auth::user()->email }}</small>
 									</p>
 								</li>
 								<li class="user-footer">
-									<div class="pull-left">
+									<a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+									<!-- <div class="pull-left">
 										<a href="#" class="btn btn-default btn-flat">Profile</a>
 									</div>
 									<div class="pull-right">
 										<a href="#" class="btn btn-default btn-flat">Sign out</a>
-									</div>
+									</div> -->
 								</li>
 							</ul>
 						</li>
@@ -70,9 +81,14 @@
 						</a>
 					</li>
 					<li>
-						<a href="pages/command/index.html">
+						<a href="{{ route('team') }}"
+						   onclick="event.preventDefault();
+										 document.getElementById('logout-form2').submit();">
 							<i class="fa fa-users"></i> <span>Commands</span>
 						</a>
+						<form id="logout-form2" action="{{ route('team') }}" method="POST" style="display: none;">
+							@csrf
+						</form>
 					</li>
 					<li>
 						<a href="pages/exclusive/index.html">
